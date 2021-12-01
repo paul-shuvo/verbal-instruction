@@ -3,7 +3,7 @@
 A ROS package for a simple object detection and planar pose estimation method for textured objects.
 
 [![CodeFactor](https://www.codefactor.io/repository/github/paul-shuvo/verbal-instruction/badge)](https://www.codefactor.io/repository/github/paul-shuvo/verbal-instruction)
-[![Build Status](https://www.travis-ci.com/paul-shuvo/verbal-instruction.svg?branch=main)](https://www.travis-ci.com/paul-shuvo/verbal-instruction)
+[![Build Status](https://app.travis-ci.com/paul-shuvo/verbal-instruction.svg?branch=main)](https://app.travis-ci.com/paul-shuvo/verbal-instruction)
 ![](https://img.shields.io/badge/ROS-Noetic%20%7C%20Melodic%20%7C%20Kinetic-blue)
 ![](https://img.shields.io/badge/Python-2.7%20%7C%203.3+-green)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)
