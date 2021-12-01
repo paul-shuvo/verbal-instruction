@@ -10,15 +10,6 @@ A ROS package for a simple object detection and planar pose estimation method fo
 
 
 
-<!-- __Note:__ `sudo apt install ros-noetic-tf-conversions` before installing it
-
-following is an important image 
-
-![](https://user-images.githubusercontent.com/2781007/35928250-8c7dcb76-0be1-11e8-8f57-ce1ec9e9f36d.png)
-
-[crocos_installation](https://github.com/orocos/orocos_kinematics_dynamics/blob/master/python_orocos_kdl/INSTALL.md)
-
-[image_issue](https://github.com/orocos/orocos_kinematics_dynamics/issues/115) -->
 
 <!-- ## Table of contents -->
 - [Planar Pose Estimation](#planar-pose-estimation)
