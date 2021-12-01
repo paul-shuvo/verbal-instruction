@@ -1,0 +1,86 @@
+language: python
+sudo: required
+
+jobs:
+  include:
+
+    - name: noetic
+      os: linux
+      dist: focal
+      arch: amd64
+      install:
+        - sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+        - sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+        - sudo apt update
+        - sudo apt install ros-noetic-ros-base
+        - sudo apt-get install libasound-dev
+        - sudo apt-get install portaudio19-dev
+        - pip install pyaudio --user
+      before_script:
+        - source /opt/ros/noetic/setup.bash
+        - sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+        - sudo apt install python3-rosdep
+        - sudo rosdep init
+        - rosdep update
+      script:
+        - mkdir -p ~/catkin_ws/src
+        - cd ~/catkin_ws/src
+        - git clone https://github.com/paul-shuvo/verbal-instruction.git
+        - pip install -r verbal-instruction/requirements.txt
+        - cd ~/catkin_ws/
+        - catkin_make
+        - catkin_make install
+
+    - name: melodic
+      os: linux
+      dist: bionic
+      arch: amd64
+      install:
+        - sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+        - sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+        - sudo apt update
+        - sudo apt install ros-melodic-ros-base
+        - source /opt/ros/melodic/setup.bash
+        - sudo apt-get install libasound-dev
+        - sudo apt-get install portaudio19-dev
+        - pip install pyaudio --user
+      before_script:
+        - mkdir -p ~/catkin_ws/src
+        - cd ~/catkin_ws/src
+        - git clone https://github.com/paul-shuvo/verbal-instruction.git
+        - pip install -r verbal-instruction/requirements.txt
+        - sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+        - sudo apt install python-rosdep
+        - sudo rosdep init
+        - rosdep update
+      script:
+        - cd ~/catkin_ws/
+        - catkin_make
+        - catkin_make install
+
+    - name: kinetic
+      os: linux
+      dist: xenial
+      arch: amd64
+      install:
+        - sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+        - sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+        - sudo apt update
+        - sudo apt install ros-kinetic-ros-base
+        - source /opt/ros/kinetic/setup.bash
+        - sudo apt-get install libasound-dev
+        - sudo apt-get install portaudio19-dev
+        - pip install pyaudio --user
+      before_script:
+        - mkdir -p ~/catkin_ws/src
+        - cd ~/catkin_ws/src
+        - git clone https://github.com/paul-shuvo/verbal-instruction.git
+        - pip install -r verbal-instruction/requirements.txt
+        - sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+        - sudo apt install python-rosdep
+        - sudo rosdep init
+        - rosdep update
+      script:
+        - cd ~/catkin_ws/
+        - catkin_make
+        - catkin_make install

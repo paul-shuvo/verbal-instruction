@@ -1,0 +1,9 @@
+rnn-1-non_bi: 19215
+rnn-2-non_bi: 21327
+rnn-1-bi: 27311
+rnn-2-bi: 33583
+
+lstm-1-non_bi: 27279
+lstm-2-non_bi: 35727
+lstm-1-bi: 43439
+lstm-2-bi: 68527
