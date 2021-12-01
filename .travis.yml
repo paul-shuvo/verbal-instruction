@@ -15,7 +15,6 @@ jobs:
         - sudo apt install ros-noetic-ros-base
         - sudo apt-get install libasound-dev
         - sudo apt-get install portaudio19-dev
-        - pip install pyaudio --user
       before_script:
         - source /opt/ros/noetic/setup.bash
         - sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
@@ -43,7 +42,6 @@ jobs:
         - source /opt/ros/melodic/setup.bash
         - sudo apt-get install libasound-dev
         - sudo apt-get install portaudio19-dev
-        - pip install pyaudio --user
       before_script:
         - mkdir -p ~/catkin_ws/src
         - cd ~/catkin_ws/src
@@ -70,7 +68,6 @@ jobs:
         - source /opt/ros/kinetic/setup.bash
         - sudo apt-get install libasound-dev
         - sudo apt-get install portaudio19-dev
-        - pip install pyaudio --user
       before_script:
         - mkdir -p ~/catkin_ws/src
         - cd ~/catkin_ws/src
